@@ -17,12 +17,24 @@ body {
     background-color: #ffffff;
 }
 
-/* Layout */
+/* Layout - Responsive Container */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 3rem;
+    }
 }
 
 /* Typography - Following Ally Visual Media Brand Guidelines */
@@ -59,6 +71,19 @@ p {
     margin-bottom: 1rem;
     max-width: 65ch;
     color: #000000;
+    line-height: 1.7;
+}
+
+/* Better text alignment for desktop */
+.container p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 1.1rem;
+    }
 }
 
 ul {
@@ -94,9 +119,21 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 20px;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        padding: 1rem 3rem;
+    }
 }
 
 .nav-brand h2 {
@@ -289,20 +326,44 @@ nav {
     }
 }
 
-/* Sections */
+/* Sections - Responsive Padding */
 section {
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 section:nth-child(even) {
     background-color: #f8f9fa;
 }
 
+@media (min-width: 768px) {
+    section {
+        padding: 5rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        padding: 6rem 0;
+    }
+}
+
 .page-header {
     background: #000000;
     color: #ffffff;
     text-align: center;
-    padding: 6rem 0 4rem;
+    padding: 4rem 0 3rem;
+}
+
+@media (min-width: 768px) {
+    .page-header {
+        padding: 6rem 0 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-header {
+        padding: 8rem 0 6rem;
+    }
 }
 
 .page-header h1 {
@@ -324,7 +385,19 @@ section:nth-child(even) {
     background: #000000;
     color: #ffffff;
     text-align: center;
-    padding: 8rem 0 6rem;
+    padding: 4rem 0 3rem;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding: 6rem 0 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        padding: 8rem 0 6rem;
+    }
 }
 
 .hero h1 {
@@ -342,12 +415,17 @@ section:nth-child(even) {
     max-width: 60ch;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
-/* Grid Layouts */
-.benefits-grid,
-.services-grid,
-.testimonials-grid {
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+/* Improved Grid Layouts - Responsive */
+.benefits-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -355,19 +433,56 @@ section:nth-child(even) {
 }
 
 .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-/* Cards */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Desktop Grid Improvements */
+@media (min-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Cards - Responsive */
 .benefit,
 .service-card,
 .category-card,
 .offering,
 .benefit-section {
     background: #fff;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .benefit,
+    .service-card,
+    .category-card,
+    .offering,
+    .benefit-section {
+        padding: 2rem;
+        margin-bottom: 0;
+    }
 }
 
 .service-card h3,
@@ -376,7 +491,7 @@ section:nth-child(even) {
     margin-bottom: 1rem;
 }
 
-/* Value Proposition */
+/* Value Proposition - Responsive */
 .value-proposition {
     text-align: center;
 }
@@ -389,23 +504,50 @@ section:nth-child(even) {
     font-size: 1.125rem;
     margin: 0 auto 3rem;
     max-width: 60ch;
+    padding: 0 1rem;
 }
 
-/* Services Preview */
+@media (min-width: 768px) {
+    .value-proposition > p {
+        font-size: 1.25rem;
+        padding: 0;
+    }
+}
+
+/* Services Preview - Responsive */
 .services-preview {
     text-align: center;
+    padding: 0 1rem;
 }
 
 .services-cta {
     margin-top: 3rem;
 }
 
-/* Process Steps */
+@media (min-width: 768px) {
+    .services-preview {
+        padding: 0;
+    }
+}
+
+/* Process Steps - Responsive */
 .process-steps {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .process-steps {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .step {
