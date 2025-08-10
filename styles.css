@@ -442,7 +442,7 @@ section:nth-child(even) {
 
 .page-header p {
     font-size: 1.125rem;
-    opacity: 0.9;
+    color: #ffffff;
     max-width: 60ch;
     margin: 0 auto;
 }
@@ -478,7 +478,7 @@ section:nth-child(even) {
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2.5rem;
-    opacity: 0.95;
+    color: #ffffff;
     max-width: 60ch;
     margin-left: auto;
     margin-right: auto;
@@ -658,7 +658,7 @@ section:nth-child(even) {
 
 .testimonial cite {
     font-weight: 600;
-    color: #666;
+    color: #333333;
     font-style: normal;
 }
 
@@ -844,7 +844,7 @@ section:nth-child(even) {
 
 .contact-info {
     font-size: 1.125rem;
-    color: #666;
+    color: #333333;
 }
 
 .inquiry-types {
@@ -918,7 +918,7 @@ section:nth-child(even) {
 }
 
 .contact-footer-text {
-    color: #666;
+    color: #cccccc;
     font-style: italic;
     text-align: center;
     margin-top: 1rem;
@@ -977,7 +977,7 @@ footer {
 }
 
 .footer-info h3 {
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -986,14 +986,15 @@ footer {
 }
 
 .footer-contact a:hover {
-    color: #cccccc;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid #333;
-    color: #999;
+    color: #cccccc;
 }
 
 /* Tablet Styles */
