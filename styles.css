@@ -372,7 +372,7 @@ section:nth-child(even) {
 
 .service-card h3,
 .benefit h3 {
-    color: #0066cc;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -415,8 +415,8 @@ section:nth-child(even) {
 }
 
 .step-number {
-    background: #0066cc;
-    color: #fff;
+    background: #000000;
+    color: #ffffff;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -438,7 +438,7 @@ section:nth-child(even) {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    border-left: 4px solid #0066cc;
+    border-left: 4px solid #000000;
 }
 
 .testimonial p {
@@ -486,7 +486,7 @@ section:nth-child(even) {
 }
 
 .phase h3 {
-    color: #0066cc;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -507,7 +507,7 @@ section:nth-child(even) {
 }
 
 .project-category {
-    color: #0066cc;
+    color: #000000;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -519,7 +519,7 @@ section:nth-child(even) {
 .project blockquote {
     background: #f8f9fa;
     padding: 1.5rem;
-    border-left: 4px solid #0066cc;
+    border-left: 4px solid #000000;
     margin-top: 1.5rem;
     border-radius: 4px;
 }
@@ -535,7 +535,7 @@ section:nth-child(even) {
 
 .metric h3 {
     font-size: 2.5rem;
-    color: #0066cc;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
@@ -630,7 +630,7 @@ section:nth-child(even) {
 .contact-link {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #0066cc;
+    color: #000000;
 }
 
 .contact-info {
@@ -669,7 +669,7 @@ section:nth-child(even) {
     background: #e6f3ff;
     padding: 1rem;
     border-radius: 8px;
-    border-left: 4px solid #0066cc;
+    border-left: 4px solid #000000;
     margin-top: 2rem;
 }
 
@@ -721,8 +721,8 @@ section:nth-child(even) {
 .portfolio-cta,
 .about-cta,
 .contact-cta {
-    background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
-    color: #fff;
+    background: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 4rem 0;
 }
@@ -768,7 +768,7 @@ footer {
 }
 
 .footer-info h3 {
-    color: #0066cc;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -777,7 +777,7 @@ footer {
 }
 
 .footer-contact a:hover {
-    color: #0066cc;
+    color: #b1b1b1;
 }
 
 .footer-bottom {
