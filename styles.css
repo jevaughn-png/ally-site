@@ -339,6 +339,20 @@ fieldset.form-section legend {
     min-height: 120px;
 }
 
+/* Better alignment for home contact form */
+.home-contact-form {
+    text-align: left;
+}
+
+.home-contact-form .form-section {
+    text-align: left;
+}
+
+.home-contact-form .form-submit-btn {
+    margin: 1.5rem auto 1rem;
+    display: block;
+}
+
 .form-option {
     display: flex;
     align-items: center;
@@ -380,6 +394,27 @@ fieldset.form-section legend {
     outline-offset: 2px;
 }
 
+/* Internal links styling */
+.internal-links {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.internal-links p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.internal-links a {
+    color: #cccccc;
+    text-decoration: underline;
+}
+
+.internal-links a:hover,
+.internal-links a:focus {
+    color: #ffffff;
+}
+
 /* Responsive form styles */
 @media (max-width: 768px) {
     .name-fields {
@@ -390,6 +425,13 @@ fieldset.form-section legend {
     .contact-form, .home-contact-form {
         margin: 1.5rem auto 0;
         padding: 0 1rem;
+    }
+    
+    .home-contact-form .form-submit-btn {
+        margin: 1.5rem auto 1rem;
+        display: block;
+        width: 100%;
+        max-width: 200px;
     }
 }
 
@@ -962,11 +1004,16 @@ section:nth-child(even) {
 .service-cta,
 .portfolio-cta,
 .about-cta,
-.contact-cta {
+.contact-cta,
+.final-cta {
     background: #000000;
     color: #ffffff;
     text-align: center;
     padding: 4rem 0;
+}
+
+.final-cta h2 {
+    margin-bottom: 1.5rem;
 }
 
 .cta-section h2,
@@ -982,9 +1029,15 @@ section:nth-child(even) {
 .service-cta p,
 .portfolio-cta p,
 .about-cta p,
-.contact-cta p {
+.contact-cta p,
+.final-cta p {
     font-size: 1.125rem;
     opacity: 0.9;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2rem;
 }
 
