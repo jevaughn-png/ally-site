@@ -272,22 +272,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
             <div class="nav-brand">
-                <h2>Ally Visual Media</h2>
+                <h2><a href="index.html" aria-label="Ally Visual Media - Home">Ally Visual Media</a></h2>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+                <li role="none"><a href="portfolio.html" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="container">
                 <h1>Fort Lauderdale Video Production That Drives Revenue</h1>
@@ -419,33 +420,36 @@
                 <h2>Get A Quote</h2>
                 <p>Ready to create videos that drive real results? Tell us about your project and we'll get back to you within 24 hours.</p>
                 
-                <form class="home-contact-form" action="https://formspree.io/f/xjkbopqr" method="POST">
-                    <div class="form-section">
-                        <label class="form-label">Name <span class="required">(required)</span></label>
+                <form class="home-contact-form" action="https://formspree.io/f/xjkbopqr" method="POST" aria-labelledby="home-form-title">
+                    <h2 id="home-form-title" class="sr-only">Quick Contact Form</h2>
+                    <fieldset class="form-section">
+                        <legend class="form-label">Name <span class="required">(required)</span></legend>
                         <div class="name-fields">
                             <div class="form-field">
-                                <input type="text" name="first_name" placeholder="First Name" required>
+                                <input type="text" id="home-first-name" name="first_name" placeholder="First Name" required aria-required="true" aria-label="First Name">
                             </div>
                             <div class="form-field">
-                                <input type="text" name="last_name" placeholder="Last Name" required>
+                                <input type="text" id="home-last-name" name="last_name" placeholder="Last Name" required aria-required="true" aria-label="Last Name">
                             </div>
                         </div>
+                    </fieldset>
+                    
+                    <div class="form-section">
+                        <label class="form-label" for="home-email">Email <span class="required">(required)</span></label>
+                        <input type="email" id="home-email" name="email" required aria-required="true">
                     </div>
                     
                     <div class="form-section">
-                        <label class="form-label">Email <span class="required">(required)</span></label>
-                        <input type="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-section">
-                        <label class="form-label">Message <span class="required">(required)</span></label>
-                        <textarea name="message" rows="4" placeholder="Tell us about your video project..." required></textarea>
+                        <label class="form-label" for="home-message">Message <span class="required">(required)</span></label>
+                        <textarea id="home-message" name="message" rows="4" placeholder="Tell us about your video project..." required aria-required="true" aria-describedby="home-message-help"></textarea>
+                        <div id="home-message-help" class="form-help sr-only">Describe your video production needs</div>
                     </div>
                     
                     <input type="hidden" name="_subject" value="New Home Page Contact Form - Ally Visual Media">
                     <input type="hidden" name="_replyto" value="info@allyvisualmedia.com">
                     
-                    <button type="submit" class="form-submit-btn">Submit</button>
+                    <button type="submit" class="form-submit-btn" aria-describedby="home-submit-help">Submit</button>
+                    <div id="home-submit-help" class="form-help sr-only">Submit your inquiry for a quick response</div>
                 </form>
                 
                 <div class="internal-links">
@@ -459,7 +463,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">

@@ -47,22 +47,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
             <div class="nav-brand">
-                <h2>Ally Visual Media</h2>
+                <h2><a href="index.html" aria-label="Ally Visual Media - Home">Ally Visual Media</a></h2>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+                <li role="none"><a href="portfolio.html" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                <li role="none"><a href="contact.html" class="active" role="menuitem" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="page-header">
             <div class="container">
                 <h1>Get Started with Professional Video Production</h1>
@@ -289,24 +290,25 @@
                 <h2>Send Us a Message</h2>
                 <p>Fill out the form below and we'll get back to you within 24 hours to discuss your video production needs.</p>
                 
-                <form class="contact-form" action="https://formspree.io/f/xjkbopqr" method="POST">
-                    <div class="form-section">
-                        <label class="form-label">Name <span class="required">(required)</span></label>
+                <form class="contact-form" action="https://formspree.io/f/xjkbopqr" method="POST" aria-labelledby="contact-form-title">
+                    <h2 id="contact-form-title" class="sr-only">Contact Form</h2>
+                    <fieldset class="form-section">
+                        <legend class="form-label">Name <span class="required">(required)</span></legend>
                         <div class="name-fields">
                             <div class="form-field">
-                                <label class="field-label">First Name</label>
-                                <input type="text" name="first_name" required>
+                                <label class="field-label" for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first_name" required aria-required="true">
                             </div>
                             <div class="form-field">
-                                <label class="field-label">Last Name</label>
-                                <input type="text" name="last_name" required>
+                                <label class="field-label" for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last_name" required aria-required="true">
                             </div>
                         </div>
-                    </div>
+                    </fieldset>
                     
                     <div class="form-section">
-                        <label class="form-label">Email <span class="required">(required)</span></label>
-                        <input type="email" name="email" required>
+                        <label class="form-label" for="email">Email <span class="required">(required)</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-help">
                         <div class="form-option">
                             <input type="checkbox" id="newsletter" name="newsletter" value="yes">
                             <label for="newsletter">Sign up for news and updates</label>
@@ -314,18 +316,20 @@
                     </div>
                     
                     <div class="form-section">
-                        <label class="form-label">Phone</label>
-                        <input type="tel" name="phone">
+                        <label class="form-label" for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" aria-describedby="phone-help">
+                        <div id="phone-help" class="form-help sr-only">Optional: Your phone number for follow-up contact</div>
                     </div>
                     
                     <div class="form-section">
-                        <label class="form-label">Company</label>
-                        <input type="text" name="company">
+                        <label class="form-label" for="company">Company</label>
+                        <input type="text" id="company" name="company" aria-describedby="company-help">
+                        <div id="company-help" class="form-help sr-only">Optional: Your company or organization name</div>
                     </div>
                     
                     <div class="form-section">
-                        <label class="form-label">Subject <span class="required">(required)</span></label>
-                        <select name="subject" required>
+                        <label class="form-label" for="subject">Subject <span class="required">(required)</span></label>
+                        <select id="subject" name="subject" required aria-required="true">
                             <option value="">Select project type</option>
                             <option value="Corporate Video Production">Corporate Video Production</option>
                             <option value="Commercial/Marketing Video">Commercial/Marketing Video</option>
@@ -337,14 +341,16 @@
                     </div>
                     
                     <div class="form-section">
-                        <label class="form-label">Message <span class="required">(required)</span></label>
-                        <textarea name="message" rows="6" placeholder="Tell us about your project, goals, timeline, budget range, and any specific requirements..." required></textarea>
+                        <label class="form-label" for="message">Message <span class="required">(required)</span></label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us about your project, goals, timeline, budget range, and any specific requirements..." required aria-required="true" aria-describedby="message-help"></textarea>
+                        <div id="message-help" class="form-help sr-only">Please describe your video production needs in detail</div>
                     </div>
                     
                     <input type="hidden" name="_subject" value="New Contact Form Submission - Ally Visual Media">
                     <input type="hidden" name="_replyto" value="info@allyvisualmedia.com">
                     
-                    <button type="submit" class="form-submit-btn">Submit</button>
+                    <button type="submit" class="form-submit-btn" aria-describedby="submit-help">Submit</button>
+                    <div id="submit-help" class="form-help sr-only">Submit your inquiry and we'll respond within 24 hours</div>
                 </form>
             </div>
         </section>
@@ -364,7 +370,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">

@@ -4,7 +4,8 @@
       "Bash(mkdir:*)",
       "Bash(grep:*)",
       "Bash(find:*)",
-      "Bash(open:*)"
+      "Bash(open:*)",
+      "Bash(git push:*)"
     ],
     "deny": []
   }
